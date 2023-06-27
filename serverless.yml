@@ -1,0 +1,18 @@
+service: aws-node-project
+frameworkVersion: '3'
+
+plugins:
+  modules:
+    - '@haftahave/serverless-ses-template'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+custom:
+  sesTemplates:
+    addStage: false
+
+functions:
+  function1:
+    handler: index.handler
